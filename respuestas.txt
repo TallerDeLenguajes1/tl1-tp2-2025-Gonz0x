@@ -1,0 +1,4 @@
+-Al utilizar el comando git checkout main, no puedo ver el archivo tp2_1_2.c porque es otra rama la cual no cambia las modificaciones del la rama del main (la principal)
+
+-En VSCODE en source control noto que el grafico se amplia, se agrega un punto con el nuevo commit
+-Se combinan ambas ramas.
