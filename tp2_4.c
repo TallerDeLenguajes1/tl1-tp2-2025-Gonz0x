@@ -2,6 +2,10 @@
 #include <stdlib.h>
 #include <math.h>
 
+void listarPCs(struct compu pcs[], int cantidad);
+void mostrarMasVieja(struct compu pcs[], int cantidad);
+void mostrarMasVeloz(struct compu pcs[], int cantidad);
+
 struct compu {
  int velocidad; // Velocidad de procesamiento en GHz (valor entre 1 y 3)
  int anio; // Año de fabricación (valor entre 2015 y 2024)
@@ -10,13 +14,60 @@ struct compu {
 }typedef computadora;
 
 int main(){
+    int cantidad = 5;
+    computadora pc;
+    computadora *pcs = (computadora *)malloc(cantidad * sizeof(computadora));
     srand(time(NULL));
-    int velocidad = 0, anio = 0, nucleos = 0;
-    velocidad = 1+rand()%3;
-    anio = 2015+rand()%2024;
-    nucleos = 1+rand()%8;
+    pc.velocidad = 1+rand()%3;
+    pc.anio = 2015+rand()%2024;
+    pc.cantidad_nucleos = 1+rand()%8;
+    char tipos[6][10] = {"Intel", "AMD", "Celeron", "Athlon", "Core",
+        "Pentium"};
+    computadora compu[5];
+    for (int i = 0; i < 5; i++)
+    {
+        
+        pc.tipo_cpu = 
+    }
+            
+
+    for (int i = 0; i < cantidad; i++)
+    {
+        free(pcs[i].tipo_cpu);
+    }
+    free(pcs);
+    
 
     return 0;
 }
 
+void listarPCs(struct compu pcs[], int cantidad){
+    for (int i = 0; i < cantidad; i++)
+    {
+        printf("\nPC:%d", i+1);
+        printf("\nVelocidad: %d", pcs[i].velocidad);
+        printf("\nAnio: %d", pcs[i].anio);
+        printf("\nCantidad de nucleos: %d", pcs[i].cantidad_nucleos);
+        printf("\nProcesador: %d", pcs[i].tipo_cpu);
+    }
+    
+}
+void mostrarMasVieja(struct compu pcs[], int cantidad){
+    int menor = 0;
+    printf("\nPC mas vieja:");
+    for (int i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].anio < pcs[menor].anio)
+        {
+            menor = i;
+        }
+        
+    }
+    printf("\nVelocidad: %d", pcs[menor].velocidad);
+    printf("\nAnio: %d", pcs[menor].anio);
+    printf("\nCantidad de nucleos: %d", pcs[menor].cantidad_nucleos);
+    printf("\nProcesador: %d", pcs[menor].tipo_cpu);
+    
+}
+void mostrarMasVeloz(struct compu pcs[], int cantidad);
 
