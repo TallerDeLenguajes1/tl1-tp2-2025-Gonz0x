@@ -12,7 +12,7 @@ double *puntero = vt;
 for(i = 0;i < N; i++)
 {
     puntero[i] = 1+rand()%100;
-    printf("\n%f", puntero[i]);
+    printf("\n%2.f", puntero[i]);
 }
     return 0;
 }
