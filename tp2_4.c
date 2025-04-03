@@ -25,7 +25,7 @@ int main(){
     for (int i = 0; i < 5; i++)
     {    //valores aleatorios
         pcs[i].velocidad = 1+rand()%3;
-        pcs[i].anio = 2015+rand()%2024;
+        pcs[i].anio = 2015+rand()%10;
         pcs[i].cantidad_nucleos = 1+rand()%8;
         int indice_aleatorio= rand() % 6;
         pcs[i].tipo_cpu = tipos[indice_aleatorio]; //para cada pc generada el campo tipo_cpu
