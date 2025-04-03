@@ -67,7 +67,20 @@ void mostrarMasVieja(struct compu pcs[], int cantidad){
     printf("\nAnio: %d", pcs[menor].anio);
     printf("\nCantidad de nucleos: %d", pcs[menor].cantidad_nucleos);
     printf("\nProcesador: %d", pcs[menor].tipo_cpu);
+}
+
+void mostrarMasVeloz(struct compu pcs[], int cantidad){
+    for (int  i = 0; i < cantidad; i++)
+    {
+        if (pcs[i].velocidad == 3)
+        {
+            printf("\nVelocidad: %d", pcs[i].velocidad);
+            printf("\nAnio: %d", pcs[i].anio);
+            printf("\nCantidad de nucleos: %d", pcs[i].cantidad_nucleos);
+            printf("\nProcesador: %d", pcs[i].tipo_cpu);
+        }
+        
+    }
     
 }
-void mostrarMasVeloz(struct compu pcs[], int cantidad);
 
