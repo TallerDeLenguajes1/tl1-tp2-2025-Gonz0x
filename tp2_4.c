@@ -32,7 +32,7 @@ int main(){
         //de la estructura apunta a una cadena seleccionada aleatoriamente del arreglo tipos
     }
 
-    listarPCs(pcs, cantidad);
+    //listarPCs(pcs, cantidad);
     mostrarMasVieja(pcs, cantidad); 
     mostrarMasVeloz(pcs, cantidad);
 
@@ -75,6 +75,7 @@ void mostrarMasVieja(computadora pcs[], int cantidad){
 }
 
 void mostrarMasVeloz(computadora pcs[], int cantidad){
+    printf("\nPC mas veloz:");
     for (int  i = 0; i < cantidad; i++)
     {
         if (pcs[i].velocidad == 3)
